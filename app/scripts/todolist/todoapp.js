@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
 'use strict';
-define(["todolist"], function (TodoList) {
+define(["todolist/todolist"], function (TodoList) {
     return React.createClass({
         getInitialState: function () {
             return {items: [], text: ""};
@@ -18,10 +18,10 @@ define(["todolist"], function (TodoList) {
             });
         },
         render: function () {
-            return (React.DOM.div(null, 
+            return (React.DOM.div(null,
                 React.DOM.h3(null, "TODO"),
                 TodoList( {items:this.state.items}),
-                React.DOM.form( {onSubmit:this.onSubmit}, 
+                React.DOM.form( {onSubmit:this.onSubmit},
                     React.DOM.input( {value:this.state.text, onChange:this.onChange}),
                     React.DOM.button(null, 'Add ' + (this.state.items.length + 1))
                 )
