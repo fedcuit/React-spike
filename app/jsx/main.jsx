@@ -14,11 +14,6 @@ require.config({
 });
 
 require(['todoapp', 'commentapp'], function (TodoApp, CommentApp) {
-    var data = [
-        {author: "Pete Hunt", text: "This is one comment"},
-        {author: "Jordan Walke", text: "This is *another* comment"}
-    ];
-
     React.renderComponent(<TodoApp />, $('#todoApp')[0]);
-    React.renderComponent(<CommentApp data={data} />, $('#commentApp')[0]);
+    React.renderComponent(<CommentApp url="scripts/comments.json" />, $('#commentApp')[0]);
 });
