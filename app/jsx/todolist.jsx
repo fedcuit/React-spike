@@ -9,7 +9,6 @@ define([], function () {
             return <ul>
                 {this.props.items.map(this.todoItem)}
             </ul>
-
         }
     });
 });

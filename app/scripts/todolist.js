@@ -9,7 +9,6 @@ define([], function () {
             return React.DOM.ul(null, 
                 this.props.items.map(this.todoItem)
             )
-
         }
     });
 });

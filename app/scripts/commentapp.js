@@ -12,11 +12,14 @@ define(['commentlist', 'commentform'], function (CommentList, CommentForm) {
                     this.setState({data: data});
                 }.bind(this));
         },
+        handleCommentSubmit: function (comment) {
+            this.setState({data: this.state.data.concat([comment])});
+        },
         render: function () {
             return (React.DOM.div( {className:"commentApp"}, 
                 React.DOM.h1(null, "Comments"),
-                CommentList( {data:this.state.data}),
-                CommentForm(null )
+                CommentList( {data:this.state.data} ),
+                CommentForm( {onCommemtSubmit:this.handleCommentSubmit} )
             ));
         }
     });
