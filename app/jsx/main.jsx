@@ -13,7 +13,8 @@ require.config({
     }
 });
 
-require(['todolist/todoapp', 'comment/commentapp'], function (TodoApp, CommentApp) {
+require(['todolist/todoapp', 'comment/commentapp', 'timer/timerapp'], function (TodoApp, CommentApp, TimerApp) {
     React.renderComponent(<TodoApp />, $('#todoApp')[0]);
     React.renderComponent(<CommentApp url="scripts/comments.json" />, $('#commentApp')[0]);
+    React.renderComponent(<TimerApp />, $('#timer')[0]);
 });
