@@ -13,11 +13,6 @@ require.config({
     }
 });
 
-require(['app', 'todoapp'], function (App, TodoApp) {
-    // use app here
-    React.renderComponent(
-        <App />,
-        document.getElementById('app')
-    );
-    React.renderComponent(<TodoApp />, document.getElementById('app'));
+require(['todoapp'], function (TodoApp) {
+    React.renderComponent(<TodoApp />, $('#todoApp')[0]);
 });
