@@ -11,6 +11,7 @@ Learn React step by step
 * Todo list
 * Comment app
 * A timer
+* A product table
 
 ##Brief Introduction and Tips
 
@@ -30,9 +31,10 @@ props are immutable: they are passed from the parent and are "owned" by the pare
 To implement interactions, we introduce mutable state to the component. `this.state` is private to the component and can be changed by calling `this.setState()`. When the state is updated, the component re-renders itself.
 
 `getInitialState()` executes exactly once during the lifecycle of the component and sets up the initial state of the component.
-> getInitialState() returns the intialized `state` object，not like in Angular `init()` assign value to `scope`
 
 `componentDidMount()` is a method called automatically by React when a component is rendered. 
+> all methods that used `this.state`, `this.props`, `this.refs` to be decleared inside `createClass({})`
+getInitialState() returns the intialized `state` object，not like in Angular `init()` assign value to `scope`
 
 ---
 ####Events
@@ -60,8 +62,6 @@ this.refs.text.getDOMNode().value = '';
 If child component want to change the state of parent component, it has to be done with pass callback function from parent to child component.
 
 ---
-> all methods that used `this.state`, `this.props`, `this.refs` to be decleared inside `createClass({})`
-
 #### JSX
 * If a variable is defined using `React.createClass()`, then we can use it a `tag` in other JSX code. `CategoryRow` in below example:
 
