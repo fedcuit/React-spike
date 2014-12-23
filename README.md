@@ -9,6 +9,7 @@ Learn React step by step
 ##Examples Included:
 * Todo list
 * Comment app
+* A timer
 
 ##Brief Introduction and Tips
 
