@@ -34,7 +34,7 @@ To implement interactions, we introduce mutable state to the component. `this.st
 
 `componentDidMount()` is a method called automatically by React when a component is rendered. 
 > all methods that used `this.state`, `this.props`, `this.refs` to be decleared inside `createClass({})`
-getInitialState() returns the intialized `state` object，not like in Angular `init()` assign value to `scope`
+> getInitialState() returns the intialized `state` object，not like in Angular `init()` assign value to `scope`
 
 ---
 ####Events
