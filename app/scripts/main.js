@@ -13,8 +13,11 @@ require.config({
     }
 });
 
-require(['todolist/todoapp', 'comment/commentapp', 'timer/timerapp'], function (TodoApp, CommentApp, TimerApp) {
-    React.renderComponent(TodoApp(null ), $('#todoApp')[0]);
-    React.renderComponent(CommentApp( {url:"scripts/comments.json"} ), $('#commentApp')[0]);
-    React.renderComponent(TimerApp(null ), $('#timer')[0]);
-});
+require(
+    ['todolist/todoapp', 'comment/commentapp', 'timer/timerapp', 'product/productapp'],
+    function (TodoApp, CommentApp, TimerApp, ProductApp) {
+        React.renderComponent(TodoApp(null ), $('#todoApp')[0]);
+        React.renderComponent(CommentApp( {url:"scripts/comments.json"} ), $('#commentApp')[0]);
+        React.renderComponent(TimerApp(null ), $('#timer')[0]);
+        React.renderComponent(ProductApp( {url:"scripts/products.json"} ), $('#product')[0]);
+    });
